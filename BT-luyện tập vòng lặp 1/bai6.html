@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="text"></h1>
+<script>
+    let count=0
+    let i=0
+    let sum=0
+    while (count<30)
+    {
+        if (i%7==0)
+        {
+            sum=sum+i;
+            count++;
+        }
+        i+=7;
+    } document.getElementById('text').innerHTML='Tổng 30 số chia hết cho 7 = ' +sum;
+</script>
+</body>
+</html>

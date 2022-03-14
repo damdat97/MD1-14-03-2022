@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let rows=1; rows<=5; rows++) {
+        for (let column = 1; column <= rows; column++) {
+            document.write('*')
+        } document.write('<br>');
+    }
+    for (let rows=5; rows>=1; rows--)
+    {
+        for(let column=1; column<=rows; column++) {
+            document.write('*')
+    } document.write('<br>');
+    }
+    let i,j;
+    for (i=5;i>=0;i--){
+        for (j=0;j<5;j++){
+            if (j<i) {
+                document.write('&ensp;');
+            } else {
+                document.write('*');
+            }
+        }document.write ('<br>');
+    }
+     for (a=0;a<=5; a++){
+         for (b=0;b<5;b++){
+             if (b<a){
+                 document.write('&ensp;')
+             } else{
+                 document.write('*');
+             }
+         }document.write('<br>');
+     }
+</script>
+</body>
+</html>

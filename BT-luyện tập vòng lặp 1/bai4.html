@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =parseInt(prompt('Nhập number: '));
+    let n1 = 0, n2 = 1, nextTerm;
+    for (let i = 1; i <= a; i++) {
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+        if (nextTerm%5==0){
+            document.write('Số chia hết cho 5 đầu tiên = ' +nextTerm);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

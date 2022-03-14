@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="choi" onclick="choi()">Chơi</button>
+<script>
+    let bam=document.getElementById('choi');
+    let a=parseInt(prompt('Nhập số đầu: '));
+    let b=parseInt(prompt('Nhập số cuối: '));
+    let c=Math.random()*(b-a);
+    let d=parseInt(prompt('Nhập số đoán: '));
+    function choi() {
+        for(i=0; i<3;i++){
+            if (d==c){
+                alert('Done!');
+                break;
+            } else if
+            (d<c || d>c){
+                alert('Chọn lại')
+                e=parseInt(prompt('Nhập số: '));
+            }
+        }alert('Hết lượt!');
+    }
+</script>
+</body>
+</html>
