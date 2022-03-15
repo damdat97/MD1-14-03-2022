@@ -5,24 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-<button id="choi" onclick="choi()">Chơi</button>
+<button onclick="but()">Chơi</button>
 <script>
-    let bam=document.getElementById('choi');
-    let a=parseInt(prompt('Nhập số đầu: '));
-    let b=parseInt(prompt('Nhập số cuối: '));
-    let c=Math.random()*(b-a);
-    let d=parseInt(prompt('Nhập số đoán: '));
-    function choi() {
-        for(i=0; i<3;i++){
+    function but() {
+        let a = parseInt(prompt('Nhập khoảng muốn bắt đầu: '));
+        let b = parseInt(prompt('Nhập khoảng muốn kết thúc: '));
+        let c = Math.floor(Math.random() * (b - a) + a);
+        for (i = 0; i < 3; i++) {
+            let d = prompt('Nhập số muốn chơi: ');
             if (d==c){
-                alert('Done!');
-                break;
-            } else if
-            (d<c || d>c){
-                alert('Chọn lại')
-                e=parseInt(prompt('Nhập số: '));
+                alert('Win!');
+            } else if (d<c){
+                alert('Số nhỏ hơn!');
+            } else{
+                alert('Số lớn hơn!');
             }
-        }alert('Hết lượt!');
+        }
     }
 </script>
 </body>

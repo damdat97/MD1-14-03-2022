@@ -7,14 +7,14 @@
 <body>
 <script>
     let n1 = 0, n2 = 1, nextTerm;
-    for (count=1;;){
+    while (count=1){
         for (let i = 1; i <= 20; i++) {
             nextTerm = n1 + n2;
             n1 = n2;
             n2 = nextTerm;
         } sum = n2+n1-1;
         console.log(sum);
-        break;
+        break
     }
 </script>
 </body>
