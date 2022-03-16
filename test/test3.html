@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="original"></p>
+<p id="result"></p>
+<p id="tich"></p>
+<script>
+    let a =prompt('Nhập vào số giá trị trong mảng: ')
+    let arr=[];
+    let number;
+    for (i=0;i<a;i++){
+        number=Math.floor(Math.random()*100);
+        arr.push(number);
+    } document.getElementById('original').innerHTML='Các giá trị trong mảng: ' +arr;
+    let result=[]
+    for (i=0;i<a;i++) {
+        if ( arr[i] %2 == 0){
+            result.push(arr[i])
+        }
+    }document.getElementById('result').innerHTML='Các giá trị có phần tử chẵn: ' +result;
+    let product=1;
+    for (i=0;i<result.length;i++) {
+        product= product*result[i]
+    } document.getElementById('tich').innerHTML='Tích các số chẵn trong mảng: ' +product;
+</script>
+</body>
+</html>

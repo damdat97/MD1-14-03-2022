@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="original"></p>
+<p id="x"></p>
+<p id="result"></p>
+<script>
+    let a=prompt('Nhập số giá trị trong mảng: ');
+    let arr=[];
+    for (i=0;i<a;i++) {
+        number=Math.floor(Math.random()*100);
+        arr.push(number)
+    } document.getElementById('original').innerHTML='Các giá trị trong mảng: ' +arr;
+        let x = parseInt(prompt('Nhập giá trị x: '));
+        document.getElementById('x').innerHTML='Giá trị x: ' +x;
+        let check=true;
+        let c=arr.indexOf(x);
+        if (c==check) {
+            document.getElementById('result').innerHTML='Vị trí của x: '+c;
+        } else {
+            document.getElementById('result').innerHTML='-1';
+        }
+</script>
+</body>
+</html>
