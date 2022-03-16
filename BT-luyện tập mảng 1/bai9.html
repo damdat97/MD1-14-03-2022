@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let arr=[];
+    let brr=[];
+        for (i = 0; i < 10; i++) {
+            number = Math.floor(Math.random() * 100);
+            arr.push(number);
+        }
+        console.log('10 giá trị trong mảng a: ' + arr);
+        for (i = 0; i < 10; i++) {
+            number = Math.floor(Math.random() * 100);
+            brr.push(number);
+        }
+         console.log('10 giá trị trong mảng b: ' + brr);
+        let c = arr.concat(brr);
+        document.getElementById('result').innerHTML = 'Mảng c: ' + c;
+</script>
+</body>
+</html>

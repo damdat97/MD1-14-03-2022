@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="songuyen()">Số nguyên</button>
+<button onclick="arrange()">Arrange</button>
+<p id="so"></p>
+<p id="result"></p>
+<script>
+    let arr=[];
+    function songuyen() {
+        for (i=0;i<10;i++) {
+            let number=Math.floor(Math.random()*100);
+            arr.push(number);
+        } document.getElementById('so').innerHTML= 10 + ' số nguyên: ' +arr;
+    }
+    function arrange() {
+        arr.sort(function(a,b){return b-a});
+        document.getElementById('result').innerHTML='Giá trị sau khi sắp xếp: '+arr;
+    }
+</script>
+</body>
+</html>

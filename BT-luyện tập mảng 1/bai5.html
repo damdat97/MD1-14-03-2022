@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="original"></p>
+<p id="result"></p>
+<script>
+    let arr= [];
+    let a = prompt('Nhập số giá trị trong mảng: ');
+    for (i=0;i<a;i++) {
+        number=Math.floor(Math.random()*200-100);
+        arr.push(number)
+    } document.getElementById('original').innerHTML= a + ' giá trị trong mảng: ' +arr;
+    let count=0;
+    for (i=0;i<arr.length;i++) {
+        if (arr[i] < 0) {
+            count++
+        }
+    } document.getElementById('result').innerHTML='Số giá trị nguyên âm trong mảng: '+ count;
+</script>
+</body>
+</html>

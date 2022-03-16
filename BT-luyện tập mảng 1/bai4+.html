@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="text()">Mảng số nguyên random</button>
+<button onclick="reverse()">Reverse</button>
+<p id="display"></p>
+<p id="result"></p>
+<script>
+    let arr=[];
+    function text() {
+        let input=document.getElementById('input').value;
+        if (input <=0) {
+            alert('Nhập lại!')
+        } else {
+            for (let i=0; i<input;i++) {
+                let number =Math.floor(Math.random()*100);
+                arr.push(number);
+            } document.getElementById('display').innerHTML= input + ' giá trị random từ 0-100: ' +arr;
+        }
+    }
+    function reverse() {
+        let first = 0;
+        let b = arr;
+        let last = b.length-1;
+        while (first<last) {
+            let c = b[first];
+            b[first] = b[last];
+            b[last] = c;
+            first++;
+            last--;
+        } document.getElementById('result').innerHTML='Các giá trị sau khi đảo ngược: ' +b;
+    }
+</script>
+</body>
+</html>

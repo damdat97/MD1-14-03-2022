@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Mảng số nguyên:</h2>
+<h3 id="number"></h3>
+<h2 >Mảng sau khi đảo ngược:</h2>
+<h3 id="result"></h3>
+<script>
+    let a =parseInt(prompt('Nhập vào số giá trị trong mảng: '));
+    let arr= [];
+    let number;
+    for (i=0;i<a;i++) {
+        number=Math.floor(Math.random()*100);
+        arr.push(number);
+    }
+    document.getElementById('number').innerHTML=arr;
+    let first = 0;
+    let last = arr.length -1;
+    while (first <last) {
+        let b = arr[first];
+        arr[first]=arr[last];
+        arr[last]= b;
+        first++;
+        last--;
+    } document.getElementById('result').innerHTML=arr;
+</script>
+</body>
+</html>

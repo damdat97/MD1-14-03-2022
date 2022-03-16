@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addNumber()">Add number</button>
+<br><br>
+<input type="text" id="addNB">
+<button onclick="addRs()">Result</button>
+<p id="original"></p>
+<p id="result"></p>
+<script>
+    let arr=[]
+    function addNumber() {
+        for (i = 0; i < 10; i++) {
+            number = Math.floor(Math.random() * 100);
+            arr.push(number);
+        }
+        console.log('10 giá trị trong mảng: ' + arr);
+    }
+    function addRs() {
+        let x=document.getElementById('addNB').value;
+        for (i=0;i<arr.length;i++) {
+            if (x == arr[i]) {
+                document.getElementById('result').innerHTML='V = ' + x + ' is in the array!';
+                break;
+            } else {
+                document.getElementById('result').innerHTML='V = ' +x  +' is not in the array!';
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>10 số ngẫu nhiên trong mảng:</p>
+    <p id="original"></p>
+    <p>Những số lớn hơn 10:</p>
+    <p id="result"></p>
+</div>
+<script>
+    let arr = [];
+    let result=[];
+    for ( i=0;i<10;i++) {
+        number=Math.floor(Math.random()*100);
+        arr.push(number);
+    } document.getElementById('original').innerHTML= arr;
+    for (i=0;i<10;i++) {
+        if (arr[i] >=10) {
+            result.push(arr[i]);
+        }
+    } document.getElementById('result').innerHTML=result;
+</script>
+</body>
+</html>

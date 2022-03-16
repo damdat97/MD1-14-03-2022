@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> 10 số nguyên random trong mảng:</p>
+<p id="number"></p>
+<p>Phần tử có giá trị lớn nhất:</p>
+<p id="result"></p>
+<script>
+    let a=[];
+    for (i=0;i<10;i++) {
+        number=Math.floor(Math.random()*100);
+        a.push(number)
+    } document.getElementById('number').innerHTML=a;
+    let Max = a[0];
+    let index=0;
+    for (i=0;i<10;i++) {
+        if (Max < a[i]) {
+            Max = a[i];
+            index=i;
+        }
+    }
+    document.getElementById('result').innerHTML='Max = ' + Max + '<br>' + "Vị trí: " + index;
+</script>
+</body>
+</html>
