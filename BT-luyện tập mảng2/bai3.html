@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="addTxt">
+<button onclick="text()">Nhập chuỗi</button>
+<button onclick="result()">Result</button>
+<p id="text"></p>
+<p id="result"></p>
+<script>
+    let arr=[];
+    let x=0
+    function text() {
+        arr[x]=document.getElementById('addTxt').value;
+        x++;
+        document.getElementById('addTxt').value='';
+        console.log(arr)
+    }
+    function result() {
+        let count=0
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]%1 === 0) {
+                count++
+            }
+        }document.getElementById('result').innerHTML='Các ký tự số trong mảng: ' +count;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button type="button" onclick="text()">Add</button>
+<button type="button" onclick="replace()">Replace</button>
+<p id="result"></p>
+<script>
+    let arr=[];
+    let count=0;
+    function text() {
+        arr[count]=document.getElementById("input").value;
+        count++;
+        document.getElementById("input").value=""
+        console.log(arr);
+    }
+    function replace() {
+        let a = "";
+        for (let i = 0; i < arr.length; i++) {
+            a = a + arr[i];
+        }
+        document.getElementById("result").innerHTML = "Before: " + a + "<br>" + "After: " + a.replace(/-/g, '_');
+
+    }
+</script>
+</body>
+</html>
