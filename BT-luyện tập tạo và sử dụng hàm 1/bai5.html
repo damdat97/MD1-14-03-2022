@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr1=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+  let arr2=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+  let txt=prompt('Tên: ');
+  let vitri=arr1.indexOf(txt);
+  if (vitri == -1) {
+      alert('Nhập sai tên!')
+  } else {
+      alert(arr2[vitri]);
+  }
+</script>
+</body>
+</html>

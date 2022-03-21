@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav {
+            height: 50px;
+            width: 100%;
+            background: gold;
+        }
+        .content {
+            height: 700px;
+            width: 100%;
+            background: green;
+        }
+        .left {
+            height: 700px;
+            width: 25%;
+            background: blue;
+            float: left;
+        }
+        .mid {
+            height: 700px;
+            width: 25%;
+            background: yellow;
+            float: left;
+        }
+        .right {
+            height: 700px;
+            width: 25%;
+            background: red;
+            float: left;
+        }
+        @media only screen and (max-width: 900px) {
+            .left {
+                width: 0%;
+            }
+            .mid {
+                width: 65%;
+            }
+            .right {
+                width: 35%;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .right {
+                width: 0%;
+            }
+            .mid {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="nav"></div>
+<div class="content">
+    <div class="left"></div>
+    <div class="mid"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

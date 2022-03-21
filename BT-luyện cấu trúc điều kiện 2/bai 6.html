@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: red">Ta có phương trình bậc 1:</h1>
+<h2>! ax + b = c</h2>
+<br>
+Nhập a: <input type="text" id="text1">
+<br><br>
+Nhập b: <input type="text" id="text2">
+<br><br>
+Nhập c: <input type="text" id="text3">
+<br><br>
+<button onclick="bam()">Kết quả</button>
+<h3 id="text4"></h3>
+<script>
+    let a=document.getElementById('text1');
+    let b=document.getElementById('text2');
+    let c=document.getElementById('text3');
+    function bam() {
+        let d=(c.value - b.value)/a.value;
+        document.getElementById('text4').innerHTML='X = ' +d;
+    }
+</script>
+</body>
+</html>

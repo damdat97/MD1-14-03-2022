@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature  = function (celsius) {
+        this.celsius=celsius;
+        this.getCelsius = function () {
+            return this.celsius;
+        }
+        this.setCelsisu = function (celsius) {
+            this.celsius=celsius;
+        }
+        this.getCtoF = function () {
+            return this.celsius * 1.8 + 32
+        }
+        this.getCtoK = function () {
+            return this.celsius + 273;
+        }
+    }
+    let input = new Temperature(25);
+    let ctof = input.getCtoF();
+    document.write('25 độ C sang độ F= ' + ctof + '<br>');
+    let ctok = input.getCtoK();
+    document.write('25 độ C sang độ K= ' + ctok);
+</script>
+</body>
+</html>

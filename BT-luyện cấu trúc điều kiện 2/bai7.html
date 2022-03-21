@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Đây là phương trình bậc 2:</h2>
+<h3>ax^2 +bx + c = 0</h3>
+Nhập a: <input type="text" id="text1">
+<br>
+<br>
+Nhập b: <input type="text" id="text2">
+<br><br>
+Nhập c: <input type="text" id="text3">
+<br><br><button onclick="ketqua()">Kết quả</button>
+<h3 id="text4"></h3>
+<h3 id="text5"></h3>
+<script>
+    function ketqua() {
+        let a = document.getElementById('text1');
+        let b=document.getElementById('text2');
+        let c =document.getElementById('text3');
+        let a1 = parseInt(a.value);
+        let b1=parseInt(b.value);
+        let c1=parseInt(c.value);
+        if (a1 == 0) {
+            if (b1 == 0) {
+                if (c1 == 0) {
+                    document.getElementById('text4').innerHTML = 'Phương trình vô số nghiệm.';
+                } else {
+                    document.getElementById('text4').innerHTML = 'Phương trình vô nghiệm.';
+                }
+            } else {
+                let x = -c1 / b1;
+                document.getElementById('text4').innerHTML = 'X = ' + x;
+            }
+        } else {
+            let d = b1 * b1 - 4 * a1 * c1;
+            if (d < 0) {
+                document.getElementById('text4').innerHTML = 'Phương trình vô nghiệm.';
+            } else if (d == 0) {
+                let e = -b1 / (2 * a);
+                document.getElementById('text4').innerHTML = 'Phương trình có nghiệm x1 = x2 = ' + e;
+            } else if (d > 0) {
+                let f = (-b1 + d ** (1 / 2)) / (2 * a1);
+                let h = (-b1 - d ** (1 / 2)) / (2 * a1);
+                document.getElementById('text4').innerHTML = 'Phương trình có nghiệm x1 = ' + f;
+                document.getElementById('text5').innerText = 'Phương trình có nghiệm x2 = ' + h;
+            }
+        }
+    }
+</script>
+</body>
+</html>

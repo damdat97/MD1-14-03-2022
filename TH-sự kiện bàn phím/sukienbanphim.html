@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="doReady()">
+<img id="nobita" src="https://i.pinimg.com/564x/67/49/ef/6749ef6706e79c3a8c2f0c661385bfa4.jpg" style="position: absolute;left: 0;top: 0" height="300px" width="150px">
+<script>
+    function doReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+    function upArrowPressed() {
+        let element=document.getElementById('nobita');
+        element.style.top=parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        let  element =document.getElementById('nobita');
+        element.style.top=parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+
+    }
+</script>
+</body>
+</html>

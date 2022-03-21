@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="rectangle" style="border: 1px solid black;" height="200px" width="200px"></canvas>
+<p id="result"></p>
+<script>
+    let Retangle = function (x, y , length, width) {
+        this.x = x;
+        this.getX = function () {
+            return this.x;
+        }
+        this.setX = function (x) {
+            this.x=x;
+        }
+        this.y = y;
+        this.getY=function () {
+            return this.y;
+        }
+        this.setY = function (y) {
+            this.y = y;
+        }
+        this.length=length;
+        this.getLength=function () {
+            return length
+        }
+        this.setLength = function (length) {
+            this.length=length;
+        }
+        this.width=width;
+        this.getWidth=function () {
+            return width;
+        }
+        this.setWitdh=function (width) {
+            this.width =width;
+        }
+        this.getArea= function () {
+            return this.length*this.width;
+        }
+        this.getPerimeter=function () {
+            return (this.length+this.width)*2;
+        }
+        this.display=function () {
+            let hcn=document.getElementById('rectangle');
+            let ctx=hcn.getContext('2d');
+            ctx.fillStyle="blue";
+            ctx.fillRect(x, y, length, width);
+        }
+    }
+    let  rectangle = new Retangle(20, 50, 150, 50);
+    rectangle.display();
+    let  perimeter = rectangle.getPerimeter();
+    let area = rectangle.getArea();
+    let kq=document.getElementById('result').innerHTML='Chu vi hình chữ nhật: ' +perimeter + '<br>' + 'Diện thích hình chữ nhật: ' +area;
+</script>
+</body>
+</html>
