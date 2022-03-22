@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        name;
+        weight;
+        speed;
+        alive;
+        constructor(name, weight, speed, alive) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+            this.alive=alive
+        }
+        nameRat() {
+            return this.name;
+        }
+        weightRat(){
+            return this.weight;
+        }
+        speedRat() {
+            return this.speed;
+        }
+        aliveRat() {
+            return this.alive;
+        }
+        sayRat(content) {
+            if (this.alive)
+            {
+                document.write(this.name+" say: "+content);
+            }
+        }
+    }
+    class Cat {
+        name;
+        weightCat;
+        speedCat;
+        constructor(name, weight, speed) {
+            this.name=name;
+            this.weightCat=weight;
+            this.speedCat=speed;
+        }
+        catch(rat) {
+            if (this.speedCat > rat.speedRat() ) {
+                return rat.nameRat();
+            } else {
+                return false;
+            }
+        }
+        eat(rat) {
+            if (this.catch(rat) && rat.aliveRat()) {
+                return rat.nameRat();
+            } else {
+                return false
+            }
+        }
+        upweightCat(rat) {
+            if (this.eat(rat)) {
+                this.weightCat=this.weightCat + rat.weightRat();
+            }
+        }
+        sayCat(content) {
+            document.write(this.name + ' say: ' +content);
+        }
+    }
+    let rat= new Rat('Mickey', 10, 10, true);
+    let cat= new Cat('Tom', 20, 15);
+    rat.sayRat('Chit chitt!' + '<br>')
+    cat.sayCat('Meo Meoo' + '<br>');
+    document.write(cat.name + ' catch ' + cat.catch(rat) + '<br>');
+    document.write(cat.name + ' eat ' + cat.eat(rat) + '<br>');
+    cat.upweightCat(rat);
+    document.write('Weight of ' + cat.name + ' ' +cat.weightCat)
+</script>
+</body>
+</html>

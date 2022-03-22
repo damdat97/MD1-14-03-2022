@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        setPiece(piece){
+            this.piece=piece;
+        }
+        getPiece() {
+            return this.piece;
+        }
+        decreasePiece() {
+            if (this.piece > 0) {
+                return  this.piece --;
+            } else {
+                return this.piece=0;
+            }
+        }
+    }
+    class Human {
+        name;
+        weight;
+        gender;
+        say;
+        constructor(name, weight, gender, say) {
+            this.name=name;
+            this.weight=weight;
+            this.gender=gender;
+            this.say=say;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setApple(apple) {
+            this.apple=apple;
+        }
+        checkApple() {
+            return this.apple.getPiece();
+        }
+        eat() {
+            if (this.status) {
+                this.weight++;
+                document.write(this.name + this.say + '<br>');
+            }
+        }
+        oneShot(apple) {
+            this.status = true;
+            return  this.apple.decreasePiece();
+        }
+    }
+    let adam = new Human('Adam', 70, 'male', ' say "my turn"');
+    let eva = new Human('Eva', 50, 'female', ' say "give me"');
+    let apple =  new Apple();
+    apple.setPiece(10);
+    adam.setApple(apple);
+    eva.setApple(apple);
+    for (let i=0;i<5;i++) {
+        eva.oneShot();
+        eva.eat();
+        document.write('Weight of Eva: ' + eva.getWeight()+'.' + 'The  of apple: ' +eva.checkApple()+ '<br>');
+        adam.oneShot();
+        adam.eat();
+        document.write('Weight of Adam: ' +adam.getWeight()+'.' + 'The of apple: ' +adam.checkApple() + '<br>')
+    }
+</script>
+</body>
+</html>
